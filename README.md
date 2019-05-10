@@ -32,7 +32,8 @@ Update:
 ## Prepare docker image
 
 ```bash
-docker build -t openobservatory/mk-alpine:`date +%Y%m%d` .
+docker build -t openobservatory/mk-alpine .
+docker tag openobservatory/mk-alpine openobservatory/mk-alpine:`date +%Y%m%d`
 ```
 
 ## Push docker image
