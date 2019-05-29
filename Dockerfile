@@ -1,4 +1,4 @@
-FROM alpine:20190408
+FROM alpine:20190508
 RUN apk add g++ linux-headers musl-dev zlib-dev openssl-dev \
   autoconf automake libtool file make libevent-dev
 RUN find / -name \*.so|grep -v python2.7|grep -v perl5|sort -u

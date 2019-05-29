@@ -5,7 +5,7 @@ builddir=./build/$name
 rm -rf $builddir
 install -d $builddir
 tar -C $builddir -xzf $tarball
-srcdir=$builddir/curl-curl-7_64_1
+srcdir=$builddir/curl-curl-7_65_0
 (
   set -ex
   cd $srcdir
