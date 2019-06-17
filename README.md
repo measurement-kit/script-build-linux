@@ -11,22 +11,14 @@ Update:
 
 1. the base image in [Dockefile](Dockerfile)
 
-2. [curl/download.sh](curl/download.sh)
+2. [measurement-kit/download.sh](measurement-kit/download.sh)
 
-3. [curl/build.sh](curl/build.sh)
-
-4. [libmaxminddb/download.sh](libmaxminddb/download.sh)
-
-5. [libmaxminddb/build.sh](libmaxminddb/build.sh)
-
-6. [measurement-kit/download.sh](measurement-kit/download.sh)
-
-7. [measurement-kit/build.sh](measurement-kit/build.sh)
+3. [measurement-kit/build.sh](measurement-kit/build.sh)
 
 ## Download dependencies
 
 ```bash
-./download.sh all
+./measurement-kit/download.sh
 ```
 
 ## Prepare docker image
@@ -41,12 +33,3 @@ docker tag openobservatory/mk-alpine openobservatory/mk-alpine:`date +%Y%m%d`
 ```bash
 docker push openobservatory/mk-alpine
 ```
-
-## Future improvements
-
-We're currently recompiling curl and libmaxminddb because on Alpine curl
-depends on nghttp2, for which a static library is not provided. Yet, [a
-future version of Alpine will have this fixed](
-https://bugs.alpinelinux.org/issues/10229), so we can further simplify
-the build process when that change lands in a Docker image.
-
