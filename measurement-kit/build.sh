@@ -1,11 +1,12 @@
-#!/bin/sh -e
+#!/bin/sh
+set -e
 name=measurement-kit
 tarball=./pkg/$name/tarball.tar.gz
 builddir=./build/$name
 rm -rf $builddir
 install -d $builddir
 tar -C $builddir -xzf $tarball
-srcdir=$builddir/$name-0.10.4
+srcdir=$builddir/$name-0.10.6
 (
   set -ex
   cd $srcdir
