@@ -1,3 +1,10 @@
-#!/bin/sh -e
-url=https://github.com/measurement-kit/measurement-kit/archive/v0.10.4.tar.gz
-sha256=6ca0d9e7a9c1ff0ea8713bf59fde9f87365acdc4b784a5a4bb3f35a77bc4b775
+#!/bin/sh
+url=https://github.com/measurement-kit/measurement-kit/archive/v0.10.6.tar.gz
+sha256=5ec94e522c3bc43cbf749659c18d4b13bcfbb2874db4d6b4e21b160d76dd5bd0
+name=measurement-kit
+destdir=pkg/$name
+set -ex
+rm -rf $destdir
+install -d $destdir
+curl -fsSLo $destdir/tarball.tar.gz $url
+[ "`shasum -a 256 $destdir/tarball.tar.gz|awk '{print $1}'`" = $sha256 ]
