@@ -1,6 +1,6 @@
 #!/bin/sh
-url=https://github.com/measurement-kit/measurement-kit/archive/v0.10.7.tar.gz
-sha256=abe8f2f24ed64c0fed9b439cb7f335456f11ac204a8d679c31595cdec87c6b7b
+url=https://github.com/measurement-kit/measurement-kit/archive/v0.10.8.tar.gz
+sha256=773c0f03fa21b56b34a24f97b4fedf96e66b0f49ef549d5c674e63ed43e1c278
 name=measurement-kit
 destdir=pkg/$name
 set -ex
