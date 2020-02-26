@@ -6,7 +6,7 @@ builddir=./build/$name
 rm -rf $builddir
 install -d $builddir
 tar -C $builddir -xzf $tarball
-srcdir=$builddir/$name-0.10.10
+srcdir=$builddir/$name-0.10.11
 (
   set -ex
   cd $srcdir
@@ -17,7 +17,7 @@ srcdir=$builddir/$name-0.10.10
   # TODO(bassosimone): MK's configure is not able to handle the
   # presence of `-lz` yet, so we use this hack.
   export LIBS="-lz"
-  ./configure --disable-shared --disable-dependency-tracking $CONFIGUREFLAGS
+  ./configure --without-libcurl --disable-shared --disable-dependency-tracking $CONFIGUREFLAGS
   make V=0 -j`nproc`
   make install-strip
 )
