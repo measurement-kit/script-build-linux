@@ -6,7 +6,7 @@ builddir=./build/$name
 rm -rf $builddir
 install -d $builddir
 tar -C $builddir -xzf $tarball
-srcdir=$builddir/$name-0.10.11
+srcdir=$builddir/$name-0.10.12
 (
   set -ex
   cd $srcdir

@@ -1,4 +1,4 @@
-FROM alpine:20200428
+FROM alpine:20200626
 
 # Development environment.
 RUN apk add autoconf automake file g++ libtool linux-headers make musl-dev
